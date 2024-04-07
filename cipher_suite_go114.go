@@ -1,8 +1,8 @@
 // SPDX-FileCopyrightText: 2023 The Pion community <https://pion.ly>
 // SPDX-License-Identifier: MIT
 
-//go:build go1.14
-// +build go1.14
+//go:build go1.14 && !tinygo
+// +build go1.14,!tinygo
 
 package dtls
 

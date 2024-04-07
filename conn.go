@@ -281,7 +281,7 @@ func DialWithContext(ctx context.Context, network string, rAddr *net.UDPAddr, co
 	// net.ListenUDP is used rather than net.DialUDP as the latter prevents the
 	// use of net.PacketConn.WriteTo.
 	// https://github.com/golang/go/blob/ce5e37ec21442c6eb13a43e68ca20129102ebac0/src/net/udpsock_posix.go#L115
-	pConn, err := net.ListenUDP(network, nil)
+	pConn, err := listenUDP(network, nil)
 	if err != nil {
 		return nil, err
 	}
